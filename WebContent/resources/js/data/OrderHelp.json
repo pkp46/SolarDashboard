@@ -1,0 +1,36 @@
+{
+
+	"ORFS" : [
+				"check in IMM Ship Advice service response API if it contains SIM/IMEI (depending on type of order—add a check) and shipment table is populated or not otherwise populate it and mark order to ORSH",
+				"In OSHF, means it is failed while shipping (sim or imei entry is missing not present in Ship Advice service) Here, we need to ask with IMM to provide missing detail.",
+				"IF device is BYOD, then we don’t ask with BP. Check in the zig_extra_order table, there will be a temporary order usually created. Take it and check in the zig_ser_order_err with that temporary id and check with equipmentdevice api XML. You will get imei and update it."
+			],
+	"ORFI"	: [
+				"Mark to open. If it gets repeatedly stuck with error as incomplete details -> create separate XML and post it to IMM manually. ",
+				"Need to have all details in the description page (failed XML..and other table details from which we need to query the missing data)"
+		    ],
+	"OSHF"	: [
+				"Check in IMM Ship Advice service response API if it contains SIM/IMEI (depending on type of order—add a check) and shipment table is populated or not otherwise populate it and mark order to ORSH OR ",
+				"In OSHF, means it is failed while shipping (sim or imei entry is missing).Here, you need to ask with IMM to provide missing detail.",
+				"IF device is BYOD, then we don’t ask with BP. Check in the zig_extra_order table, there will be a temporary order usually created. Take it and check in the zig_ser_order_err with that temporary id and check with equipmentdevice api XML.you will get imei, use and update it."
+		    ],
+	"ORLF"	: [
+				"Mark to open – In ORLF means it is failing while loading and device is not available with brightpoint.Here, you need to ask with BP when it will be available, and when it ll get available just mark it as OPEN to reprocess the order."
+		    ],	    
+		    
+	"ORLF"	: [
+				"Mark to ORSH.If it gets repeatedly stuck to OURF Here, you have to check in CSM side. In this stage only,  entry create in physical_device table.",
+				"Before this order_status should remain in 'N' status in pos_order table.",
+				"If order is in OURF and order_status is in 'A' (it got marked by mistake), so mark it in 'N' again.",
+				"If order is in OURF and  order_status is in 'O' . So, mark the order is in ACTI."
+		    ],	
+	"PDRF"	: [
+				"In this stage, it usually with one service. Scenario 3: Error in service icUpSII00",
+				"Cause: Failure in DLC. Need to check CSM log.You can try to reprocess these orders once by marking PDRF",
+				"And We ask with DCM, if dcm is down their side."
+		    ],
+ 	"ACTF"	: [
+				"In this stage, it usually fails because customer is having insufficient balance and he has to pay, we can mark it as PDRS."
+		    ]	
+		    
+}

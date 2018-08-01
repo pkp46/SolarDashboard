@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>PDashboard</title>
+<link rel="stylesheet" href="resources/css/bootstrap.css" media="screen">
+<link rel="stylesheet" href="resources/css/bootswatch.min.css" media="screen">
+<link rel="stylesheet" href="resources/css/sdStyle.css" media="screen">
+<link rel="stylesheet" href="resources/css/angular-flash.css" media="screen">
+<link rel="stylesheet" href="resources/js/libs/loadMask/treasure-overlay-spinner.css" media="screen">
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+</head>
+<body ng-app="PDashboard">
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container menuBgClr ">
+			<div class="navbar-header">
+				<a href="#dashboard" class="navbar-brand"> <span
+					class="glyphicon glyphicon-globe marRight8"></span>PDashboard
+				</a>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="navbar-main">
+				<ul class="nav navbar-nav">
+					<li><a href="#/dashboard">Dashboard</a></li>
+				</ul>
+
+				<!-- <ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#" id="themes"><span
+							class="glyphicon glyphicon-user marRight8"></span>Hi User<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="themes">
+							<li><a href="#/login">Logout</a></li>
+						</ul></li>
+				</ul> -->
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container minContainerHeight">
+		<div ng-view></div>
+	</div>
+
+	<!-- Application Libreries Import -->
+	<script src="resources/js/libs/jquery/jquery-1.10.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.3.0/angular-resource.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.js"></script>
+	<script src="resources/js/libs/angularjs/angular-animate.js"></script>
+	<script src="resources/js/libs/angularjs/angular-route.min.js"></script>
+	<script src="resources/js/libs/angularjs/angular-sanitize.min.js"></script>
+
+	<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="https://www.amcharts.com/lib/3/gauge.js"></script>
+	<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+	<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+	<!-- <script src="https://rawgit.com/ThumbsAlmighty/amCharts-Angular/master/dist/amChartsDirective.js"></script> -->
+
+	<!-- Application Modules Controller Import -->
+	<script src="resources/js/app.js"></script>
+	<script src="resources/js/controller/DashboardController.js"></script>
+	<script src="resources/js/libs/utils/xml2json.js"></script>
+
+</body>
+</html>

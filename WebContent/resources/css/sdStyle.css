@@ -1,0 +1,283 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: url(../images/5.jpg) no-repeat center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-size: 100% 100%;
+}
+
+
+.marRight8{
+	margin-right: 8px;
+}
+
+.marLeft8{
+	margin-left: 8px;
+}
+.marLeft10{
+	margin-left: 10px !important;
+}
+.marLeft25{
+	margin-left: 25px;
+}
+
+.marLeft40{
+	margin-left: 40px;
+}
+
+.marLeft75{
+	margin-left: 75px;
+}
+
+.marRight20{
+	margin-right: 20px;
+}
+
+.marRight40{
+	margin-right: 40px;
+}
+
+.marRight50{
+	margin-right: 50px !important;
+}
+
+.marRight5{
+	margin-right: 5px !important;
+}
+
+.noPadBtm{
+	padding-bottom:0px !important;
+}
+
+.textAignLeft{
+	text-align: left !important;
+}
+
+.textAignCentral{
+	text-align: center !important;
+}
+
+.floatRight{
+	float: right !important;
+}
+
+.panelHeaderIcon{
+	    margin-right: 23px;
+    color: #317eac;
+}
+
+.mar5{
+	margin: 5px !important;
+}
+
+.dpWidth{
+	width: 200px;
+}
+
+.marTop20{
+	margin-top: 20px !important;
+}
+
+.marTop30{
+	margin-top: 30px !important;
+}
+
+.marTop40{
+	margin-top: 40px !important;
+}
+
+.Width30Per{
+       width: 30% !important;
+}
+
+.cursorPointer{
+       cursor: pointer !important;
+}
+
+.noFloat{
+           float: none !important;
+}
+
+.mar10{
+           margin: 10px !important;
+}
+
+.noPadLeft{
+	padding-left: 0px !important;
+}
+
+.textAlgnInit{
+           text-align: initial !important;
+}
+
+.noPad{
+	padding: 0px;
+}
+.noPadTop{
+	padding-top: 0px !important;
+}
+.padLeft15{
+	padding-left: 15px !important;
+}
+
+.excelIcon{
+	    height: 25px;
+        cursor: pointer;
+        float: right;
+}
+
+.helpIcon{
+	    font-size: 25px;
+	    color: #217246;
+	    text-decoration: initial !important;
+}
+
+.helpIcon:hover{
+	    color: #217246;
+}
+
+.helpPopupImage{
+	width: 850px;
+    margin-top: 10px;
+}
+
+.helpExcelImage{
+	width: 790px;
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.helpPupupHeight{
+	    height: 715px;
+}
+
+.panelMinHeight{
+	min-height: 290px;
+}
+
+.getLineBtn{
+	    margin-left: 35px;
+    cursor: pointer;
+    margin-top: -16px;
+}
+
+.simTBWidth{
+	    width: 60%;
+}
+
+.noTextDeco{
+	text-decoration: none !important
+}
+
+
+
+/*File Upload Button CSS Start*/
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Browse';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+/*File Upload Button CSS END*/
+
+
+.marLeft60{
+	    margin-left: 60px;
+}
+
+.clrRED{
+	color: red;
+}
+
+.clrGREEN{
+	color: green;
+}
+
+.clrBlue{
+	font-size: 18px;
+}
+
+.font21{
+	font-size: 21px;
+}
+
+.highlightRowRed{
+	background-color: #efafaf !important;
+}
+
+.menuBgClr{
+	background-color: #022a50 !important;
+}
+
+.minContainerHeight{
+	min-height: 920px !important;
+}
+
+.addMultiUpdateIcon{
+	    margin-top: 8px;
+    font-size: 20px;
+}
+
+.multiUpdateTableData{
+	padding: 20px 0px 0px 20px !important;
+}
+
+.fontSize20{
+	font-size: 20px; 
+}
+
+.dynGrphIcon{
+	padding: 3px 5px;
+}
+
+.dynGrphPopupMinHeight{
+	    min-height: 500px;
+	    max-height: 1500px;
+}
+
+.table-responsive222 {
+    max-height:300px;
+}
+
+.wordWrapString {
+	overflow-wrap: break-word;
+}
+
+.addGroupIcon{
+	font-size: 25px;
+    padding-top: 5px;
+}
+
+.searchUserIcon {
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+.confirmPopupWidth{
+	width: 570px;
+}
+
+.basicIconColor{
+	color: #555555;
+}

@@ -4,7 +4,8 @@ module.controller("DashboardController", function($scope, $routeParams, $http,$r
 
 	var gaugeChart = null;
 	
-	$scope.siteURL = 'http://localhost:8081/PDashboard/data/pData.xml';
+	//http://localhost:8080/SolarDashboard/
+	$scope.siteURL = 'data/pData.xml';
 	$scope.callInterval = 2000;
 
 	$scope.init = function() {

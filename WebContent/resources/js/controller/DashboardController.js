@@ -57,7 +57,7 @@ module.controller("DashboardController", function($scope, $routeParams, $http,$r
 			};
 		
 		
-		DashboardService.getDashData().then(function(data) {
+		DashboardService.getDashdataResponse().then(function(data) {
 			console.log(data);
 		},
 		function(errResponse) {

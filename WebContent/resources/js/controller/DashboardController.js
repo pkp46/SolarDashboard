@@ -1,11 +1,11 @@
-module.controller("DashboardController", function($scope, $routeParams, $http,$rootScope) {
+module.controller("DashboardController", function($scope, $routeParams, $http,$rootScope,DashboardService) {
 
 	$scope.title = "Power Dashboard";
 
 	var gaugeChart = null;
 	
-	//http://localhost:8080/SolarDashboard/
-	$scope.siteURL = 'data/pData.xml';
+	//http://localhost:8080/SolarDashboard/data/pData.xml
+	$scope.siteURL = 'http://192.168.111.11/api/DashData.xml?T=0&D=255&M=1';//http://192.168.111.11/api/DashData.xml?T=0&D=255&M=0
 	$scope.callInterval = 2000;
 
 	$scope.init = function() {
@@ -51,10 +51,29 @@ module.controller("DashboardController", function($scope, $routeParams, $http,$r
 	$scope.init();
 
 	function getDashXMLData() {
-		$http({
-			method : 'GET',
+		
+		var headers = {
+				'Access-Control-Allow-Origin' : '*',
+			};
+		
+		
+		DashboardService.getDashdataResponse().then(function(data) {
+			console.log(data);
+		},
+		function(errResponse) {
+			console.error('Error while fetching Currencies');
+		});
+		
+		
+		/*$http({
+			//method: 'JSONP',
 			url : $scope.siteURL,
+			headers: {
+				'Access-Control-Allow-Origin' : '*'
+			},
+			method : 'GET',
 			transformResponse : function(data) {
+				console.log(data);
 				var x2js = new X2JS();
 				var aftCnv = x2js.xml_str2json(data);
 				return aftCnv;
@@ -62,6 +81,7 @@ module.controller("DashboardController", function($scope, $routeParams, $http,$r
 			}
 		}).then(function successCallback(response) {
 			console.log(response.data.DashData.Now);
+			console.log(response);
 			var DData = response.data.DashData.Now / 1000;
 			if (gaugeChart) {
 				if (gaugeChart.arrows) {
@@ -76,7 +96,7 @@ module.controller("DashboardController", function($scope, $routeParams, $http,$r
 
 		}, function errorCallback(response) {
 			console.log(response);
-		});
+		});*/
 	}
 
 });

@@ -4,11 +4,11 @@ module.service('DashboardService', function($http,$q) {
 	 *Service Method that will fetch Dash data  
 	 * 
 	 */
-	this.getDashdataResponse=function(){
+	this.getDashdataResponse=function(siteUrl){
 		
 		return  $http({
 			  method: 'POST',
-			  url: 'http://192.168.111.11/api/DashData.xml?T=0&D=255&M=1',
+			  url: siteUrl,
               transformResponse : function(data) {
   				var x2js = new X2JS();
   				var aftCnv = x2js.xml_str2json(data);
@@ -21,6 +21,6 @@ module.service('DashboardService', function($http,$q) {
 			  });
 		
 	}
-
+	
 
 });
